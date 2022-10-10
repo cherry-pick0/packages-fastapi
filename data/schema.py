@@ -1,8 +1,11 @@
 # build a schema using pydantic
+from typing import Optional
+
 from pydantic import BaseModel
 
 
 class Package(BaseModel):
+    id: Optional[int] = None
     address: str
     weight: int
     recipient_id: int
@@ -12,6 +15,7 @@ class Package(BaseModel):
 
 
 class Recipient(BaseModel):
+    id: Optional[int] = None
     name: str
     surname: str
     vat_number: int

@@ -1,15 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
-from fastapi_sqlalchemy import DBSessionMiddleware, db
-
-from data.schema import Package as SchemaPackage
-from data.schema import Recipient as SchemaRecipient
-
-from data.schema import Package
-from data.schema import Recipient
-
-from data.models import Package as ModelPackage
-from data.models import Recipient as ModelRecipient
+from fastapi_sqlalchemy import DBSessionMiddleware
 
 import os
 from dotenv import load_dotenv
