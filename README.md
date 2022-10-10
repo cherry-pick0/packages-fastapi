@@ -1,4 +1,4 @@
-# shipup-exercises-v1
+# fastapi-exercises-v1
 
 ## Instructions
 
@@ -15,20 +15,20 @@ Install:
 Setup db:
      
         # Create local db
-        sudo -u postgres createdb shipup_exercise_db
+        sudo -u postgres createdb fastapi_exercise_db
         
         # Enter postgres
         sudo -u postgres psql
         
         # Create new user and grant privileges
-        CREATE USER shipup_exercise_user WITH ENCRYPTED PASSWORD 'shipup_exercise_db_pass';
-        GRANT ALL PRIVILEGES ON DATABASE shipup_exercise_db to shipup_exercise_user;
+        CREATE USER fastapi_exercise_user WITH ENCRYPTED PASSWORD 'fastapi_exercise_db_pass';
+        GRANT ALL PRIVILEGES ON DATABASE fastapi_exercise_db to fastapi_exercise_user;
         
         # For testing purposes - add permission to create db
-        ALTER USER shipup_exercise_user CREATEDB;
+        ALTER USER fastapi_exercise_user CREATEDB;
         
         # Connect to our new local db
-        \c shipup_exercise_db
+        \c fastapi_exercise_db
 
 
 3) Start a project
