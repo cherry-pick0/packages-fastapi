@@ -1,34 +1,36 @@
-# fastapi-exercises-v1
+# Shipping parcels service
+
+FastAPI app for tracking shipped packages.
 
 ## Instructions
 
 1) Setup
 
-<sub>Instructions for Linux/Ubuntu</sub>
-     
-Install:
-     
-   * pipenv
-   * PostgreSQL
+     *Instructions for Linux/Ubuntu*
+          
+     Install:
+          
+        * pipenv
+        * PostgreSQL
 
 
-Setup db:
+2) Setup db:
      
         # Create local db
-        sudo -u postgres createdb fastapi_exercise_db
+        sudo -u postgres createdb shipping_packages_db
         
         # Enter postgres
         sudo -u postgres psql
         
         # Create new user and grant privileges
-        CREATE USER fastapi_exercise_user WITH ENCRYPTED PASSWORD 'fastapi_exercise_db_pass';
-        GRANT ALL PRIVILEGES ON DATABASE fastapi_exercise_db to fastapi_exercise_user;
+        CREATE USER shipping_packages_user WITH ENCRYPTED PASSWORD 'shipping_packages_db_pass';
+        GRANT ALL PRIVILEGES ON DATABASE shipping_packages_db to shipping_packages_user;
         
         # For testing purposes - add permission to create db
-        ALTER USER fastapi_exercise_user CREATEDB;
+        ALTER USER shipping_packages_user CREATEDB;
         
         # Connect to our new local db
-        \c fastapi_exercise_db
+        \c shipping_packages_db
 
 
 3) Start a project
